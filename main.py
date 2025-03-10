@@ -6,59 +6,87 @@ import streamlit as st
 # Apply custom CSS for background and styling
 st.markdown(
     """
-    <style>
-          .stApp > header {
-    background-color: transparent;
-}
+   <style>
+    /* Remove Streamlit's default app header background */
+    .stApp > header {
+        background-color: transparent !important;
+    }
 
- .stApp {
+    /* Apply background color and styling */
+    .stApp {
+        background-color: #f0ffe8 !important;
+        font-family: Arial, sans-serif;
+        color: black !important;
+    }
+
+    /* Ensure label and form elements are visible */
+    label, .css-16huue1, .css-1wbqyge, .css-1l02zno {
+        font-size: 18px !important;
+        color: black !important;
+    }
+
+    /* Fix input fields */
+    input {
+        color: black !important;
+        background-color: white !important;
+        border-radius: 5px;
+        padding: 8px;
+        border: 1px solid black;
+    }
+
+    /* Mobile Fix: Force Text & Input Visibility */
+    @media screen and (max-width: 768px) {
+        .stApp {
             background-color: #f0ffe8 !important;
-            font-family: Arial, sans-serif;
         }
-        label, .css-16huue1, .css-1wbqyge, .css-1l02zno {
-            font-size: 18px;
-        }
-        input {
+        label, input {
+            color: black !important;
             background-color: white !important;
-            border-radius: 5px;
-            padding: 8px;
-            border: 1px solid white;
         }
-        .feedback {
-            font-size: 16px;
-            font-weight: bold;
-            padding: 8px;
-            border-radius: 5px;
-            text-align: center;
-            margin-top: 10px;
-        }
-        .strong { background-color: #28a745; color: white; }
-        .moderate { background-color: #ffc107; color: black; }
-        .weak { background-color: #dc3545; color: white; }
-        .generate-btn {
-            background-color: #a0db83;
-            color: white;
-            font-size: 18px;
-            border-radius: 8px;
-            padding: 10px;
-            text-align: center;
-            cursor: pointer;
-            display: inline-block;
-        }
-        .generate-btn:hover {
-            background-color: #a0db83;
-            border-color: #a0db83
-        }
-        .generated-password {
-            font-size: 18px;
-            font-weight: bold;
-            background: #a0db83;
-            padding: 10px;
-            border-radius: 5px;
-            text-align: center;
-            margin-top: 10px;
-        }
-    </style>
+    }
+
+    /* Feedback messages */
+    .feedback {
+        font-size: 16px;
+        font-weight: bold;
+        padding: 8px;
+        border-radius: 5px;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .strong { background-color: #28a745; color: white; }
+    .moderate { background-color: #ffc107; color: black; }
+    .weak { background-color: #dc3545; color: white; }
+
+    /* Button styling */
+    .generate-btn {
+        background-color: #a0db83;
+        color: white;
+        font-size: 18px;
+        border-radius: 8px;
+        padding: 10px;
+        text-align: center;
+        cursor: pointer;
+        display: inline-block;
+    }
+
+    .generate-btn:hover {
+        background-color: #87c970;
+    }
+
+    /* Fix generated password text visibility */
+    .generated-password {
+        font-size: 18px;
+        font-weight: bold;
+        background: #a0db83;
+        padding: 10px;
+        border-radius: 5px;
+        text-align: center;
+        margin-top: 10px;
+        color: black !important;
+    }
+</style>
     """,
     unsafe_allow_html=True
 )
