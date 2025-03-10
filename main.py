@@ -36,7 +36,7 @@ st.markdown(
         .moderate { background-color: #ffc107; color: black; }
         .weak { background-color: #dc3545; color: white; }
         .generate-btn {
-            background-color: #3cc2d6;
+            background-color: #a0db83;
             color: white;
             font-size: 18px;
             border-radius: 8px;
@@ -46,12 +46,13 @@ st.markdown(
             display: inline-block;
         }
         .generate-btn:hover {
-            background-color: #30a9bb;
+            background-color: #a0db83;
+            border-color: #a0db83
         }
         .generated-password {
             font-size: 18px;
             font-weight: bold;
-            background: #1f8a96;
+            background: #a0db83;
             padding: 10px;
             border-radius: 5px;
             text-align: center;
